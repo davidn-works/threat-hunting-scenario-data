@@ -1,5 +1,3 @@
-Okay, here's a threat hunt scenario designed to be impressive, focusing on a sophisticated attack, yet using relatively simple queries. The emphasis is on *showing process* and *detecting unusual combinations of activities*, rather than just finding a single, obvious IOC.
-
 **Threat Event (Stolen Credentials used for Lateral Movement and Data Exfiltration via Legitimate Cloud Service)**
 
 **Scenario Title:**  Detecting Credential Theft and Exfiltration via OneDrive Misuse
