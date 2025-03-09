@@ -4,8 +4,8 @@
 
 **Reason for Hunt:**  Unusual System Behavior & Cybersecurity News
 
-*   **Unusual System Behavior:**  The Security Operations Center (SOC) received an alert from the SIEM regarding an unusual spike in failed login attempts for a single user account, "jsmith," followed by a successful login from an unusual geographic location (outside the company's normal operating areas). This alone might be a false positive (e.g., user on vacation), but it warrants further investigation.
-* **Cybersecurity News:** A recent report detailed a new phishing campaign targeting employees with fake "HR Policy Updates," that use highly obfuscated PowerShell scripts. The security team needs to evaluate.
+* The Security Operations Center (SOC) received an alert from the SIEM regarding an unusual spike in failed login attempts for a single user account, "jsmith," followed by a successful login from an unusual geographic location (outside the company's normal operating areas). This alone might be a false positive (e.g., user on vacation), but it warrants further investigation.
+* A recent report detailed a new phishing campaign targeting employees with fake "HR Policy Updates," that use highly obfuscated PowerShell scripts. The security team needs to evaluate.
 
 **Hypothesis:**  An attacker successfully phished "jsmith," stole their credentials, used them to log in, deployed a script to extract sensitive data, and then exfiltrated that data via a legitimate cloud service (OneDrive) to blend in with normal traffic.
 
