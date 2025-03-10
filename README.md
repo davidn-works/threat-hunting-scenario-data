@@ -79,7 +79,7 @@ DeviceFileEvents
 | where ActionType == "FileDeleted"
 | project Timestamp, DeviceName, FileName, FolderPath
 
-// 6. Correlate findings:  This is the "impressive" part
+// 6. Correlate findings:
 //    We'll use a simplified join, but in a real hunt, you'd refine this.
 let SuspiciousLogins = 
     IdentityLogonEvents
