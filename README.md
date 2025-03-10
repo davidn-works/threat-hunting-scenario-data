@@ -41,14 +41,13 @@
 **Related Queries (KQL - Microsoft Defender for Endpoint/XDR):**
 
 ```kql
-// 1. Investigate the suspicious login activity for user "jsmith"
-//This needs to be translated to the correct log, but for the example, we will use a general statement
-// IdentityLogonEvents
-// | where AccountName == "jsmith"
-// | where LogonType == "Interactive" // Or the appropriate logon type
-// | where Timestamp > ago(24h) // Look at the last 24 hours, adjust as needed
-// | summarize LoginCount = count(), FailedCount = countif(Result == "Failed"), Locations = dcount(IPAddress) by Timestamp
-// //This would need to be further modified to check if the Locations is outside the pre-defined list
+// 1. Investigate the suspicious login activity for user "labuser"
+IdentityLogonEvents
+| where AccountName == "labuser"
+| where LogonType == "Interactive" // Or the appropriate logon type
+| where Timestamp > ago(24h) // Look at the last 24 hours, adjust as needed
+| summarize LoginCount = count(), FailedCount = countif(Result == "Failed"), Locations = dcount(IPAddress) by Timestamp
+| This would need to be further modified to check if the Locations is outside the pre-defined list
 
 // 2. Find PowerShell execution with potential obfuscation or unusual parameters
 DeviceProcessEvents
